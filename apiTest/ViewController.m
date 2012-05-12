@@ -13,6 +13,12 @@
 @end
 
 @implementation ViewController
+@synthesize requestAddress;
+@synthesize responseContext;
+
+- (IBAction)submitRequest:(UIButton *)sender {
+    self.requestAddress.text = @"address";
+}
 
 - (void)viewDidLoad
 {
@@ -22,6 +28,8 @@
 
 - (void)viewDidUnload
 {
+    [self setRequestAddress:nil];
+    [self setResponseContext:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
